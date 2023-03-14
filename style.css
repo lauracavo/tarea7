@@ -1,34 +1,11 @@
-#main_productos {
-  margin-top: 70px;
-}
-
-.productos {
-  margin-top: 30px;
-  margin-bottom: 30px;
+body {
   display: grid;
-  grid-template-columns: repeat(3, 300px);
+  grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 350px);
-  align-content: center;
-  justify-content: center;
   grid-row-gap: 30px;
   grid-column-gap: 30px;
 }
 
-.galery_item {
-  height: 250px;
-  width: 300px;
-  background-color: #c2daba;
-}
-
-.precio_producto,
-.nombre_producto {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 50px;
-  background-color: darkslategrey;
-  color: #ffffff;
-}
 .caja1 {
   background-color: #971a1a;
 }
@@ -61,18 +38,24 @@
 
 @media only screen and (max-width: 320px) {
   body {
-    display: flex;
-  }
-
-  .productos {
-    margin-top: 10px;
-    margin-bottom: 10px;
-    display: flex;
-    flex-direction: column;
-    grid-template-columns: repeat(1, 1fr);
-    grid-template-rows: repeat(9, 200px);
+    display: grid;
     align-content: center;
     justify-content: center;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-rows: repeat(9, 350px);
     grid-row-gap: 30px;
+    grid-column-gap: 30px;
+  }
+}
+
+@media only screen and (min-width: 320px) and (max-width: 720px) {
+  body {
+    display: grid;
+    align-content: center;
+    justify-content: center;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(5, 350px);
+    grid-row-gap: 30px;
+    grid-column-gap: 30px;
   }
 }
